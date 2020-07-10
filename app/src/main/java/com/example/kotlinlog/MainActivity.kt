@@ -14,45 +14,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val human = Human("～～",0)
+        val human = Human("イチ",1,"～～")
 
         human.say()
         Log.d("kotlintest","私の名前は"+human.name+"です。")
         Log.d("kotlintest","私の年は"+human.age+"歳です。")
 
-        val human1 = Human("イチ",1)
+        val human1 = Human("ニ",2,"～～")
 
         human1.say()
         Log.d("kotlintest","私の名前は"+human1.name+"です。")
         Log.d("kotlintest","私の年は"+human1.age+"歳です。")
 
-
         human.think()
-        Log.d("kotlintest","「私は～～について考える。」"+"(～～はhobbyから取得)")
+        Log.d("kotlintest","私は"+human.hobby+"について考える。")
 
         human1.think()
-        Log.d("kotlintest","「私は～について考える。」"+"（～はhobbyから取得）")
+        Log.d("kotlintest","私は"+human1.hobby+"について考える。")
 
-
-
-        val  str1 = "Hello"
-        val  str2 = "World"
-        val  str3 = "Hello"
-
-        if (str1.equals(str2)){
-            Log.d("kotlintest","str1とstr2は一緒です")
-        }else{
-            Log.d("kotlontest","str1とstr2は異なります")
-        }
-
-        if (str1.equals(str3)) {
-            Log.d("kotlintest", "str1とstr3は一緒です")
-        }else{
-            Log.d("kotlintest","str1とstr3は異なります")
-        }
-
-        val  i = 100
-        val str = i.toString()+"*100 = ${i*100}"
-        Log.d("kotlintest",str)
     }
 }
